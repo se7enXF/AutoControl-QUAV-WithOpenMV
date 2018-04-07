@@ -470,16 +470,6 @@
               <FilePath>..\APP\channel.h</FilePath>
             </File>
             <File>
-              <FileName>chaoshengbo.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\APP\chaoshengbo.c</FilePath>
-            </File>
-            <File>
-              <FileName>chaoshengbo.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\APP\chaoshengbo.h</FilePath>
-            </File>
-            <File>
               <FileName>yaokongqi.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\APP\yaokongqi.c</FilePath>
@@ -508,6 +498,16 @@
               <FileName>openmv.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\APP\openmv.h</FilePath>
+            </File>
+            <File>
+              <FileName>chaoshengbo.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\APP\chaoshengbo.c</FilePath>
+            </File>
+            <File>
+              <FileName>chaoshengbo.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\APP\chaoshengbo.h</FilePath>
             </File>
           </Files>
         </Group>

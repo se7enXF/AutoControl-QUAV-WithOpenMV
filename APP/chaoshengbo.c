@@ -36,7 +36,7 @@ void sr04_init(void)
 	GPIO_Init(GPIOB,&GPIO_InitStructer);
 
 	/*ECOH回响信号*/
-	GPIO_InitStructer.GPIO_Mode=GPIO_Mode_IN_FLOATING;
+	GPIO_InitStructer.GPIO_Mode=GPIO_Mode_IPD;
 	GPIO_InitStructer.GPIO_Pin=Echo;
 	GPIO_Init(GPIOB,&GPIO_InitStructer);
 
@@ -66,34 +66,29 @@ void trig_signal(void)
 float get_hight(void)
 {
 	float length=0,sum=0;
-	u16 tim;
 	u16 i=0;
 	/*测5次数据计算一次平均值*/
 	while(i!=5)
 	{
+		TIM4->CNT=0;  											//将TIM2计数寄存器的计数值清零
 		trig_signal();
+		
 		while(GPIO_ReadInputDataBit(GPIOB,Echo)==RESET);		//等待回响信号
 		TIM_Cmd(TIM4,ENABLE);									//回响信号到来，开启定时器计数
-
 		i+=1; 													//每收到一次回响信号+1，收到5次就计算均值
 		while(GPIO_ReadInputDataBit(GPIOB,Echo)==SET);			//回响信号消失
 		TIM_Cmd(TIM4,DISABLE);									//关闭定时器
 
-		tim=TIM_GetCounter(TIM4);								//获取计TIM2数寄存器中的计数值，一边计算回响信号时间
-
-		length=(tim+overcount*1000)/58.0;						//通过回响信号计算距离,单位cm
-
+		length=(TIM_GetCounter(TIM4)+overcount*1000)/58.0;		//通过回响信号计算距离,单位cm
 		sum=length+sum;
-		TIM4->CNT=0;  											//将TIM2计数寄存器的计数值清零
 		overcount=0;  											//中断溢出次数清零
 		delay_ms(100);
 	}
-	length=sum/5;
-	return length;												//距离作为函数返回值
+	return length=sum/5;												//距离作为函数返回值
 }
 
 
-/*中断，当回响信号很长是，计数值溢出后重复计数，用中断来保存溢出次数*/
+/*中断，当回响信号很长时，计数值溢出后重复计数，用中断来保存溢出次数*/
 void TIM4_IRQHandler(void)
 {
 	if(TIM_GetITStatus(TIM4,TIM_IT_Update)!=RESET)				//是否为定时器4更新中断

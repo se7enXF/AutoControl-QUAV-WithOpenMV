@@ -31,6 +31,6 @@
 .\output\apm_function.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h
 .\output\apm_function.o: ..\user\public.h
 .\output\apm_function.o: D:\Program Files (x86)\KEIL5\ARM\ARMCC\Bin\..\include\string.h
-.\output\apm_function.o: ..\APP\chaoshengbo.h
 .\output\apm_function.o: ..\APP\yaokongqi.h
 .\output\apm_function.o: ..\APP\openmv.h
+.\output\apm_function.o: ..\APP\chaoshengbo.h

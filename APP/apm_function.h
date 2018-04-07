@@ -2,11 +2,11 @@
 #define apm_function_h
 #include "stm32f10x.h"
 
-#define CH1 "ch1"
-#define CH2 "ch2"
-#define CH3 "ch3"
-#define CH4 "ch4"
-#define CH5 "ch5"
+#define CH1 "ch1"	//左右
+#define CH2 "ch2"	//前后
+#define CH3 "ch3"	//油门
+#define CH4 "ch4"	//自旋
+#define CH5 "ch5"	//模式
 
 void change_ch_value(char*,int);
 void unlock(void);

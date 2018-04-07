@@ -32,5 +32,5 @@
 .\output\main.o: ..\APP\channel.h
 .\output\main.o: ..\APP\apm_function.h
 .\output\main.o: ..\APP\yaokongqi.h
-.\output\main.o: ..\APP\chaoshengbo.h
 .\output\main.o: ..\APP\openmv.h
+.\output\main.o: ..\APP\chaoshengbo.h

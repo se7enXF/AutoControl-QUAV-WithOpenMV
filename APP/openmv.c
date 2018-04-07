@@ -23,7 +23,7 @@ void openmv_test(void)
 {
 	int t;
 	if(GPIO_ReadInputDataBit(IN_PORT, IN1) == 1 || GPIO_ReadInputDataBit(IN_PORT, IN2) == 1 ||
-		GPIO_ReadInputDataBit(IN_PORT, IN3) == 1 || GPIO_ReadInputDataBit(IN_PORT, IN4) == 1)
+	   GPIO_ReadInputDataBit(IN_PORT, IN3) == 1 || GPIO_ReadInputDataBit(IN_PORT, IN4) == 1)
 	{
 		delay_ms(5);
 		if(GPIO_ReadInputDataBit(IN_PORT, IN1) == 1)
@@ -50,25 +50,6 @@ void openmv_test(void)
 			openmv_status[t]=0;
 		}
 	}
-	/*----------------以上：输入检测-------------------------*/
-	/*----------------以下：输入功能-------------------------*/
-	if(openmv_status[0] == 1)
-	{
-		
-	}
-	if(openmv_status[1] == 1)
-	{
-		
-	}
-	if(openmv_status[2] == 1)
-	{
-		
-	}
-	else if(openmv_status[3] == 1)
-	{
-		
-	}
-	delay_ms(5);
 }
 
 

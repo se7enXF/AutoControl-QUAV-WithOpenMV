@@ -67,10 +67,10 @@ void ALT_HOLD(void)
 {
 	int overtime=0;
 	int fix_ch1 = 1000+1000*0.48;
-	int fix_ch2 = 1000+1000*0.55;
+	int fix_ch2 = 1000+1000*0.48;
 	
 	unlock();												//解锁
-	delay_ms(10);
+	delay_ms(1000);
 	MOD_ALT_HOLD();											//切换到定高模式
 
 	change_ch_value(CH3,1500);
@@ -82,21 +82,21 @@ void ALT_HOLD(void)
 	while(1)
 	{
 		key_test();											//按键检测
-		//openmv_test();										//openmv输出检测
+		openmv_test();										//openmv输出检测
 		if(key_status[1] == 1)
 			break;
 		
-		if(get_hight()<50)									//高度小于100cm动作
+		if(get_hight()<60)									//高度小于100cm动作
 		{
-			change_ch_value(CH3,1000+1000*0.55);		//UP
+			change_ch_value(CH3,1000+1000*0.65);			//UP
 			if(openmv_status[0] == 1)
-				change_ch_value(CH1,fix_ch1-1000*0.1);	//L
+				change_ch_value(CH1,fix_ch1-1000*0.2);	//L
 			else if(openmv_status[1] == 1)
-				change_ch_value(CH1,fix_ch1+1000*0.1);	//R
+				change_ch_value(CH1,fix_ch1+1000*0.2);	//R
 			if(openmv_status[2] == 1)
-				change_ch_value(CH2,fix_ch2+1000*0.1);	//F
+				change_ch_value(CH2,fix_ch2+1000*0.2);	//F
 			else if(openmv_status[3] == 1)
-				change_ch_value(CH2,fix_ch2-1000*0.1);	//B
+				change_ch_value(CH2,fix_ch2-1000*0.2);	//B
 				
 			delay_ms(20);
 			change_ch_value(CH3,1500);
@@ -107,13 +107,13 @@ void ALT_HOLD(void)
 		{
 			change_ch_value(CH3,1000+1000*0.45);		//DOWN
 			if(openmv_status[0] == 1)
-				change_ch_value(CH1,fix_ch1-1000*0.1);	//L
+				change_ch_value(CH1,fix_ch1-1000*0.2);	//L
 			else if(openmv_status[1] == 1)
-				change_ch_value(CH1,fix_ch1+1000*0.1);	//R
+				change_ch_value(CH1,fix_ch1+1000*0.2);	//R
 			if(openmv_status[2] == 1)
-				change_ch_value(CH2,fix_ch2+1000*0.1);	//F
+				change_ch_value(CH2,fix_ch2+1000*0.2);	//F
 			else if(openmv_status[3] == 1)
-				change_ch_value(CH2,fix_ch2-1000*0.1);	//B	
+				change_ch_value(CH2,fix_ch2-1000*0.2);	//B	
 			
 			delay_ms(20);
 			change_ch_value(CH3,1500);
@@ -128,8 +128,6 @@ void ALT_HOLD(void)
 	{	
 		overtime++;
 		change_ch_value(CH3,1000+1000*0.35);			//油门
-		change_ch_value(CH2,1000+1000*0.55);			//Y向后
-		change_ch_value(CH1,1000+1000*0.48);			//X左
 		if(overtime>1000)
 			break;
 	}

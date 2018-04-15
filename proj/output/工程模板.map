@@ -35,6 +35,7 @@ Section Cross References
     apm_function.o(.text) refers to stm32f10x_tim.o(.text) for TIM_SetCompare1
     apm_function.o(.text) refers to public.o(.text) for delay_s
     apm_function.o(.text) refers to yaokongqi.o(.text) for key_test
+    apm_function.o(.text) refers to openmv.o(.text) for openmv_test
     apm_function.o(.text) refers to chaoshengbo.o(.text) for get_hight
     apm_function.o(.text) refers to cfcmple.o(.text) for __aeabi_cfcmple
     apm_function.o(.text) refers to dflti.o(.text) for __aeabi_i2d
@@ -193,28 +194,28 @@ Image Symbol Table
     .text                                    0x08001a2c   Section        0  channel_out.o(.text)
     .text                                    0x08001b68   Section        0  yaokongqi.o(.text)
     .text                                    0x08001c64   Section        0  apm_function.o(.text)
-    .text                                    0x08001fd8   Section        0  openmv.o(.text)
-    .text                                    0x080020c0   Section        0  chaoshengbo.o(.text)
-    .text                                    0x0800225c   Section        0  strcmp.o(.text)
-    .text                                    0x08002278   Section        0  fadd.o(.text)
-    .text                                    0x08002328   Section        0  fdiv.o(.text)
-    .text                                    0x080023a4   Section        0  dadd.o(.text)
-    .text                                    0x080024f2   Section        0  ddiv.o(.text)
-    .text                                    0x080025d0   Section        0  dflti.o(.text)
-    .text                                    0x080025f2   Section        0  dfixi.o(.text)
-    .text                                    0x08002630   Section        0  d2f.o(.text)
-    .text                                    0x08002668   Section       20  cfcmple.o(.text)
-    .text                                    0x0800267c   Section       20  cfrcmple.o(.text)
-    .text                                    0x08002690   Section        0  llshl.o(.text)
-    .text                                    0x080026ae   Section        0  llushr.o(.text)
-    .text                                    0x080026ce   Section        0  llsshr.o(.text)
-    .text                                    0x080026f2   Section        0  iusefp.o(.text)
-    .text                                    0x080026f2   Section        0  fepilogue.o(.text)
-    .text                                    0x08002760   Section        0  depilogue.o(.text)
-    .text                                    0x0800281c   Section       36  init.o(.text)
-    i.__scatterload_copy                     0x08002840   Section       14  handlers.o(i.__scatterload_copy)
-    i.__scatterload_null                     0x0800284e   Section        2  handlers.o(i.__scatterload_null)
-    i.__scatterload_zeroinit                 0x08002850   Section       14  handlers.o(i.__scatterload_zeroinit)
+    .text                                    0x08001fc8   Section        0  openmv.o(.text)
+    .text                                    0x080020b0   Section        0  chaoshengbo.o(.text)
+    .text                                    0x0800224c   Section        0  strcmp.o(.text)
+    .text                                    0x08002268   Section        0  fadd.o(.text)
+    .text                                    0x08002318   Section        0  fdiv.o(.text)
+    .text                                    0x08002394   Section        0  dadd.o(.text)
+    .text                                    0x080024e2   Section        0  ddiv.o(.text)
+    .text                                    0x080025c0   Section        0  dflti.o(.text)
+    .text                                    0x080025e2   Section        0  dfixi.o(.text)
+    .text                                    0x08002620   Section        0  d2f.o(.text)
+    .text                                    0x08002658   Section       20  cfcmple.o(.text)
+    .text                                    0x0800266c   Section       20  cfrcmple.o(.text)
+    .text                                    0x08002680   Section        0  llshl.o(.text)
+    .text                                    0x0800269e   Section        0  llushr.o(.text)
+    .text                                    0x080026be   Section        0  llsshr.o(.text)
+    .text                                    0x080026e2   Section        0  iusefp.o(.text)
+    .text                                    0x080026e2   Section        0  fepilogue.o(.text)
+    .text                                    0x08002750   Section        0  depilogue.o(.text)
+    .text                                    0x0800280c   Section       36  init.o(.text)
+    i.__scatterload_copy                     0x08002830   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x0800283e   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x08002840   Section       14  handlers.o(i.__scatterload_zeroinit)
     .data                                    0x20000000   Section       20  system_stm32f10x.o(.data)
     .data                                    0x20000014   Section       20  stm32f10x_rcc.o(.data)
     APBAHBPrescTable                         0x20000014   Data          16  stm32f10x_rcc.o(.data)
@@ -475,47 +476,47 @@ Image Symbol Table
     lock                                     0x08001cff   Thumb Code    40  apm_function.o(.text)
     MOD_ALT_HOLD                             0x08001d27   Thumb Code    20  apm_function.o(.text)
     MOD_Stable                               0x08001d3b   Thumb Code    20  apm_function.o(.text)
-    ALT_HOLD                                 0x08001d4f   Thumb Code   602  apm_function.o(.text)
-    openmv_init                              0x08001fd9   Thumb Code    34  openmv.o(.text)
-    openmv_test                              0x08001ffb   Thumb Code   188  openmv.o(.text)
-    NVIC_Config                              0x080020c1   Thumb Code    40  chaoshengbo.o(.text)
-    sr04_init                                0x080020e9   Thumb Code   126  chaoshengbo.o(.text)
-    trig_signal                              0x08002167   Thumb Code    30  chaoshengbo.o(.text)
-    get_hight                                0x08002185   Thumb Code   164  chaoshengbo.o(.text)
-    TIM4_IRQHandler                          0x08002229   Thumb Code    32  chaoshengbo.o(.text)
-    strcmp                                   0x0800225d   Thumb Code    28  strcmp.o(.text)
-    __aeabi_fadd                             0x08002279   Thumb Code   164  fadd.o(.text)
-    __aeabi_fsub                             0x0800231d   Thumb Code     6  fadd.o(.text)
-    __aeabi_frsub                            0x08002323   Thumb Code     6  fadd.o(.text)
-    __aeabi_fdiv                             0x08002329   Thumb Code   124  fdiv.o(.text)
-    __aeabi_dadd                             0x080023a5   Thumb Code   322  dadd.o(.text)
-    __aeabi_dsub                             0x080024e7   Thumb Code     6  dadd.o(.text)
-    __aeabi_drsub                            0x080024ed   Thumb Code     6  dadd.o(.text)
-    __aeabi_ddiv                             0x080024f3   Thumb Code   222  ddiv.o(.text)
-    __aeabi_i2d                              0x080025d1   Thumb Code    34  dflti.o(.text)
-    __aeabi_d2iz                             0x080025f3   Thumb Code    62  dfixi.o(.text)
-    __aeabi_d2f                              0x08002631   Thumb Code    56  d2f.o(.text)
-    __aeabi_cfcmpeq                          0x08002669   Thumb Code     0  cfcmple.o(.text)
-    __aeabi_cfcmple                          0x08002669   Thumb Code    20  cfcmple.o(.text)
-    __aeabi_cfrcmple                         0x0800267d   Thumb Code    20  cfrcmple.o(.text)
-    __aeabi_llsl                             0x08002691   Thumb Code    30  llshl.o(.text)
-    _ll_shift_l                              0x08002691   Thumb Code     0  llshl.o(.text)
-    __aeabi_llsr                             0x080026af   Thumb Code    32  llushr.o(.text)
-    _ll_ushift_r                             0x080026af   Thumb Code     0  llushr.o(.text)
-    __aeabi_lasr                             0x080026cf   Thumb Code    36  llsshr.o(.text)
-    _ll_sshift_r                             0x080026cf   Thumb Code     0  llsshr.o(.text)
-    __I$use$fp                               0x080026f3   Thumb Code     0  iusefp.o(.text)
-    _float_round                             0x080026f3   Thumb Code    18  fepilogue.o(.text)
-    _float_epilogue                          0x08002705   Thumb Code    92  fepilogue.o(.text)
-    _double_round                            0x08002761   Thumb Code    30  depilogue.o(.text)
-    _double_epilogue                         0x0800277f   Thumb Code   156  depilogue.o(.text)
-    __scatterload                            0x0800281d   Thumb Code    28  init.o(.text)
-    __scatterload_rt2                        0x0800281d   Thumb Code     0  init.o(.text)
-    __scatterload_copy                       0x08002841   Thumb Code    14  handlers.o(i.__scatterload_copy)
-    __scatterload_null                       0x0800284f   Thumb Code     2  handlers.o(i.__scatterload_null)
-    __scatterload_zeroinit                   0x08002851   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
-    Region$$Table$$Base                      0x08002860   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08002880   Number         0  anon$$obj.o(Region$$Table)
+    ALT_HOLD                                 0x08001d4f   Thumb Code   586  apm_function.o(.text)
+    openmv_init                              0x08001fc9   Thumb Code    34  openmv.o(.text)
+    openmv_test                              0x08001feb   Thumb Code   188  openmv.o(.text)
+    NVIC_Config                              0x080020b1   Thumb Code    40  chaoshengbo.o(.text)
+    sr04_init                                0x080020d9   Thumb Code   126  chaoshengbo.o(.text)
+    trig_signal                              0x08002157   Thumb Code    30  chaoshengbo.o(.text)
+    get_hight                                0x08002175   Thumb Code   164  chaoshengbo.o(.text)
+    TIM4_IRQHandler                          0x08002219   Thumb Code    32  chaoshengbo.o(.text)
+    strcmp                                   0x0800224d   Thumb Code    28  strcmp.o(.text)
+    __aeabi_fadd                             0x08002269   Thumb Code   164  fadd.o(.text)
+    __aeabi_fsub                             0x0800230d   Thumb Code     6  fadd.o(.text)
+    __aeabi_frsub                            0x08002313   Thumb Code     6  fadd.o(.text)
+    __aeabi_fdiv                             0x08002319   Thumb Code   124  fdiv.o(.text)
+    __aeabi_dadd                             0x08002395   Thumb Code   322  dadd.o(.text)
+    __aeabi_dsub                             0x080024d7   Thumb Code     6  dadd.o(.text)
+    __aeabi_drsub                            0x080024dd   Thumb Code     6  dadd.o(.text)
+    __aeabi_ddiv                             0x080024e3   Thumb Code   222  ddiv.o(.text)
+    __aeabi_i2d                              0x080025c1   Thumb Code    34  dflti.o(.text)
+    __aeabi_d2iz                             0x080025e3   Thumb Code    62  dfixi.o(.text)
+    __aeabi_d2f                              0x08002621   Thumb Code    56  d2f.o(.text)
+    __aeabi_cfcmpeq                          0x08002659   Thumb Code     0  cfcmple.o(.text)
+    __aeabi_cfcmple                          0x08002659   Thumb Code    20  cfcmple.o(.text)
+    __aeabi_cfrcmple                         0x0800266d   Thumb Code    20  cfrcmple.o(.text)
+    __aeabi_llsl                             0x08002681   Thumb Code    30  llshl.o(.text)
+    _ll_shift_l                              0x08002681   Thumb Code     0  llshl.o(.text)
+    __aeabi_llsr                             0x0800269f   Thumb Code    32  llushr.o(.text)
+    _ll_ushift_r                             0x0800269f   Thumb Code     0  llushr.o(.text)
+    __aeabi_lasr                             0x080026bf   Thumb Code    36  llsshr.o(.text)
+    _ll_sshift_r                             0x080026bf   Thumb Code     0  llsshr.o(.text)
+    __I$use$fp                               0x080026e3   Thumb Code     0  iusefp.o(.text)
+    _float_round                             0x080026e3   Thumb Code    18  fepilogue.o(.text)
+    _float_epilogue                          0x080026f5   Thumb Code    92  fepilogue.o(.text)
+    _double_round                            0x08002751   Thumb Code    30  depilogue.o(.text)
+    _double_epilogue                         0x0800276f   Thumb Code   156  depilogue.o(.text)
+    __scatterload                            0x0800280d   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x0800280d   Thumb Code     0  init.o(.text)
+    __scatterload_copy                       0x08002831   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x0800283f   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x08002841   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    Region$$Table$$Base                      0x08002850   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08002870   Number         0  anon$$obj.o(Region$$Table)
     SystemCoreClock                          0x20000000   Data           4  system_stm32f10x.o(.data)
     AHBPrescTable                            0x20000004   Data          16  system_stm32f10x.o(.data)
     key_status                               0x20000028   Data           8  yaokongqi.o(.data)
@@ -532,9 +533,9 @@ Memory Map of the image
 
   Image Entry point : 0x08000411
 
-  Load Region LR_1 (Base: 0x08000000, Size: 0x000028bc, Max: 0xffffffff, ABSOLUTE)
+  Load Region LR_1 (Base: 0x08000000, Size: 0x000028ac, Max: 0xffffffff, ABSOLUTE)
 
-    Execution Region ER_RO (Base: 0x08000000, Size: 0x00002880, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RO (Base: 0x08000000, Size: 0x00002870, Max: 0xffffffff, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -561,32 +562,32 @@ Memory Map of the image
     0x08001950   0x000000dc   Code   RO          246    .text               misc.o
     0x08001a2c   0x0000013c   Code   RO          258    .text               channel_out.o
     0x08001b68   0x000000fc   Code   RO          270    .text               yaokongqi.o
-    0x08001c64   0x00000374   Code   RO          288    .text               apm_function.o
-    0x08001fd8   0x000000e8   Code   RO          303    .text               openmv.o
-    0x080020c0   0x0000019c   Code   RO          321    .text               chaoshengbo.o
-    0x0800225c   0x0000001c   Code   RO          339    .text               mc_w.l(strcmp.o)
-    0x08002278   0x000000b0   Code   RO          341    .text               mf_w.l(fadd.o)
-    0x08002328   0x0000007c   Code   RO          343    .text               mf_w.l(fdiv.o)
-    0x080023a4   0x0000014e   Code   RO          345    .text               mf_w.l(dadd.o)
-    0x080024f2   0x000000de   Code   RO          347    .text               mf_w.l(ddiv.o)
-    0x080025d0   0x00000022   Code   RO          349    .text               mf_w.l(dflti.o)
-    0x080025f2   0x0000003e   Code   RO          351    .text               mf_w.l(dfixi.o)
-    0x08002630   0x00000038   Code   RO          353    .text               mf_w.l(d2f.o)
-    0x08002668   0x00000014   Code   RO          355    .text               mf_w.l(cfcmple.o)
-    0x0800267c   0x00000014   Code   RO          357    .text               mf_w.l(cfrcmple.o)
-    0x08002690   0x0000001e   Code   RO          373    .text               mc_w.l(llshl.o)
-    0x080026ae   0x00000020   Code   RO          375    .text               mc_w.l(llushr.o)
-    0x080026ce   0x00000024   Code   RO          377    .text               mc_w.l(llsshr.o)
-    0x080026f2   0x00000000   Code   RO          379    .text               mc_w.l(iusefp.o)
-    0x080026f2   0x0000006e   Code   RO          380    .text               mf_w.l(fepilogue.o)
-    0x08002760   0x000000ba   Code   RO          382    .text               mf_w.l(depilogue.o)
-    0x0800281a   0x00000002   PAD
-    0x0800281c   0x00000024   Code   RO          384    .text               mc_w.l(init.o)
-    0x08002840   0x0000000e   Code   RO          388    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x0800284e   0x00000002   Code   RO          389    i.__scatterload_null  mc_w.l(handlers.o)
-    0x08002850   0x0000000e   Code   RO          390    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x0800285e   0x00000002   PAD
-    0x08002860   0x00000020   Data   RO          386    Region$$Table       anon$$obj.o
+    0x08001c64   0x00000364   Code   RO          288    .text               apm_function.o
+    0x08001fc8   0x000000e8   Code   RO          303    .text               openmv.o
+    0x080020b0   0x0000019c   Code   RO          321    .text               chaoshengbo.o
+    0x0800224c   0x0000001c   Code   RO          339    .text               mc_w.l(strcmp.o)
+    0x08002268   0x000000b0   Code   RO          341    .text               mf_w.l(fadd.o)
+    0x08002318   0x0000007c   Code   RO          343    .text               mf_w.l(fdiv.o)
+    0x08002394   0x0000014e   Code   RO          345    .text               mf_w.l(dadd.o)
+    0x080024e2   0x000000de   Code   RO          347    .text               mf_w.l(ddiv.o)
+    0x080025c0   0x00000022   Code   RO          349    .text               mf_w.l(dflti.o)
+    0x080025e2   0x0000003e   Code   RO          351    .text               mf_w.l(dfixi.o)
+    0x08002620   0x00000038   Code   RO          353    .text               mf_w.l(d2f.o)
+    0x08002658   0x00000014   Code   RO          355    .text               mf_w.l(cfcmple.o)
+    0x0800266c   0x00000014   Code   RO          357    .text               mf_w.l(cfrcmple.o)
+    0x08002680   0x0000001e   Code   RO          373    .text               mc_w.l(llshl.o)
+    0x0800269e   0x00000020   Code   RO          375    .text               mc_w.l(llushr.o)
+    0x080026be   0x00000024   Code   RO          377    .text               mc_w.l(llsshr.o)
+    0x080026e2   0x00000000   Code   RO          379    .text               mc_w.l(iusefp.o)
+    0x080026e2   0x0000006e   Code   RO          380    .text               mf_w.l(fepilogue.o)
+    0x08002750   0x000000ba   Code   RO          382    .text               mf_w.l(depilogue.o)
+    0x0800280a   0x00000002   PAD
+    0x0800280c   0x00000024   Code   RO          384    .text               mc_w.l(init.o)
+    0x08002830   0x0000000e   Code   RO          388    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x0800283e   0x00000002   Code   RO          389    i.__scatterload_null  mc_w.l(handlers.o)
+    0x08002840   0x0000000e   Code   RO          390    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x0800284e   0x00000002   PAD
+    0x08002850   0x00000020   Data   RO          386    Region$$Table       anon$$obj.o
 
 
     Execution Region ER_RW (Base: 0x20000000, Size: 0x0000003c, Max: 0xffffffff, ABSOLUTE)
@@ -615,7 +616,7 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       884         48          0          0          0       1499   apm_function.o
+       868         48          0          0          0       1491   apm_function.o
        316         28          0          0          0        906   channel_out.o
        412         20          0          2          0       1482   chaoshengbo.o
          0          0          0          0          0         32   core_cm3.o
@@ -632,7 +633,7 @@ Image component sizes
        252         12          0         12          0       1396   yaokongqi.o
 
     ----------------------------------------------------------------------
-      8472        354        336         60       1028     299044   Object Totals
+      8456        354        336         60       1028     299036   Object Totals
          0          0         32          0          0          0   (incl. Generated)
          4          0          0          2          4          0   (incl. Padding)
 
@@ -688,15 +689,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     10032        370        336         60       1028     299132   Grand Totals
-     10032        370        336         60       1028     299132   ELF Image Totals
-     10032        370        336         60          0          0   ROM Totals
+     10016        370        336         60       1028     299124   Grand Totals
+     10016        370        336         60       1028     299124   ELF Image Totals
+     10016        370        336         60          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                10368 (  10.13kB)
+    Total RO  Size (Code + RO Data)                10352 (  10.11kB)
     Total RW  Size (RW Data + ZI Data)              1088 (   1.06kB)
-    Total ROM Size (Code + RO Data + RW Data)      10428 (  10.18kB)
+    Total ROM Size (Code + RO Data + RW Data)      10412 (  10.17kB)
 
 ==============================================================================
 
